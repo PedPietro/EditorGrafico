@@ -16,7 +16,10 @@ public class Editor extends JFrame
 
     private static List<Ponto> figuras = new ArrayList<Ponto>();
 
-    private static final Color corAtual = Color.black;
+    private static Color corAtual = Color.black;
+    private static Color Azul = Color.BLUE;
+    private static Color Vermelho = Color.RED;
+    private static Color Verde = Color.BLUE;
 
     private static JLabel statusBar1;
     private static JLabel statusBar2;
@@ -73,6 +76,7 @@ public class Editor extends JFrame
                             int corG = Integer.parseInt(linha.substring(20,25).trim());
                             int corB = Integer.parseInt(linha.substring(25,30).trim());
                             Color cor = new Color(corR, corG, corB);
+                            System.out.println(linha);
                             switch (tipo.charAt(0))
                             {
                                 case 'p' : // figura é um ponto
